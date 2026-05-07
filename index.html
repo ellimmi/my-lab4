@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- 25ВП1 Моторина 18 вар Лаба 4-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Тест</title>
+        <link rel="stylesheet" href="Styles/style.css">
+        <script src="JavaScript/script.js" defer></script>
+        <link rel="icon" href="data:,">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Лабораторная работа № 4</h1>
+            <p class="subtitle">
+                Предмет: Астрономия<br>
+                Тестирование по теме «Состав и масштабы Солнечной системы»<br>
+                Моторина Лиза 25ВП1 Вариант 18
+            </p>
+
+            <div id="start-screen">
+                <p>На выполнение теста дается 10 минут.</p>
+                <button id="start-btn">Начать тест</button>
+            </div>
+
+            <div id="quiz-container">
+                <div id="timer-box">Оставшееся время: 
+                    <span 
+                        id="timer">10:00
+                    </span>
+                </div>
+
+                <form id="quiz-form">
+                    <div class="question">
+                        <p>
+                            1. Какая планета самая большая в Солнечной системе?
+                        </p>
+                        <label><input type="radio" name="q1" value="Марс">
+                            Марс
+                        </label><br>
+                        <label><input type="radio" name="q1" value="Юпитер">
+                            Юпитер
+                        </label><br>
+                        <label><input type="radio" name="q1" value="Сатурн">
+                            Сатурн
+                        </label><br>
+                        <label><input type="radio" name="q1" value="Нептун">
+                            Нептун
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <p>2. Какая планета самая горячая?</p>
+                        <label><input type="radio" name="q2" value="Меркурий">
+                            Меркурий
+                        </label><br>
+                        <label><input type="radio" name="q2" value="Венера">
+                            Венера
+                        </label><br>
+                        <label><input type="radio" name="q2" value="Земля">
+                            Земля
+                        </label><br>
+                        <label><input type="radio" name="q2" value="Марс">
+                            Марс
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <p>3. Выберите планеты-гиганты (несколько ответов):</p>
+                        <label><input type="checkbox" name="q3" value="Юпитер">
+                            Юпитер
+                        </label><br>
+                        <label><input type="checkbox" name="q3" value="Сатурн">
+                            Сатурн
+                        </label><br>
+                        <label><input type="checkbox" name="q3" value="Марс">
+                            Марс
+                        </label><br>
+                        <label><input type="checkbox" name="q3" value="Уран">
+                            Уран
+                        </label>
+                    </div>
+
+                    <div class="question">
+                         <p>4. Какие из этих планет имеют твердую поверхность?
+                         (несколько ответов)</p>
+                        <label><input type="checkbox" name="q4" value="Земля">
+                            Земля
+                        </label><br>
+                        <label><input type="checkbox" name="q4" value="Марс">
+                            Марс
+                        </label><br>
+                        <label><input type="checkbox" name="q4" value="Нептун">
+                            Нептун
+                        </label><br>
+                        <label><input type="checkbox" name="q4" value="Сатурн">
+                            Сатурн
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <p>5. Центральный объект нашей системы:</p>
+                        <select name="q5">
+                            <option value="">--Выберите--</option>
+                            <option value="Земля">Земля</option>
+                            <option value="Солнце">Солнце</option>
+                            <option value="Сириус">Сириус</option>
+                            <option value="Луна">Луна</option>
+                        </select>
+                    </div>
+
+                    <div class="question">
+                        <p>6. Как называется наша Галактика?</p>
+                        <select name="q6">
+                            <option value="">--Выберите--</option>
+                            <option value="Андромеда">Андромеда</option>
+                            <option value="Млечный Путь">Млечный Путь</option>
+                            <option value="Центавра">Центавра</option>
+                            <option value="Орион">Орион</option>
+                        </select>
+                    </div>
+
+                    <div class="question">
+                         <p>7. Сколько планет в Солнечной системе? (число)</p>
+                        <input type="text" name="q7" placeholder="Ваш ответ">
+                    </div>
+
+                    <div class="question">
+                        <p>8. У какой планеты самая заметная система колец?</p>
+                        <input type="text" name="q8" placeholder="Ваш ответ">
+                    </div>
+
+                    <button type="button" id="submit-btn">
+                        Завершить тест
+                    </button>
+                </form>
+            </div> 
+
+            <div id="result-area">
+                <h2>Результаты теста</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N</th>
+                            <th>Вопрос</th>
+                            <th>Ваш ответ</th>
+                            <th>Правильный ответ</th>
+                            <th>Баллы</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+                <p id="total-score"></p>
+                <button onclick="location.reload()">Пройти тест заново</button>
+            </div>
+        </div>
+    </body>
+</html>
